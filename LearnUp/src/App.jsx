@@ -1,8 +1,8 @@
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import { Header } from './Components/Header'
-// import { auth } from './Components/auth'
+import { Navbar } from './Components/Navbar'
 import { Login } from './Components/Login'
+import { LandingPage } from './Components/LandingPage'
 
 function App() {
   
@@ -10,9 +10,10 @@ function App() {
   return (
     <>
     <Router>
-      <Header />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/landing-page" element={<LandingPage />} />
         {/* <Route path="/get-started" element={<GetStarted />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
         {/* <Route path="/services" element={<Services />} /> */}

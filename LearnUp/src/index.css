@@ -1,6 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
 * {
+    box-sizing: border-box;
+    
+}
+
+body {
+    background-color: #EFEFEF;
+    color: #1E1E1E;
+    font-family: "Poppins", sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins";
+}
+
+a {
+    color: #1E1E1E;
+    text-decoration: none;
+}
+
+@media only screen and (min-width: 768px){
+    body {
+        /* font-size: 16px; */
+        text-align: left;
+    }
+}
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+    body {
+        /* font-size: 15px; */
+        text-align: center;
+    }
+}
+@media only screen and (min-width: 479px){
+    body {
+        /* font-size: 14px; */
+        text-align: center;
+    }
 }

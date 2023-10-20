@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 
-export const Header = () => {
+export const Navbar = () => {
 
     
 
@@ -49,7 +49,7 @@ const Nav = styled.nav`
     justify-content: space-between;
     
     align-items: center;
-    padding: 0 36px;
+    padding: 0 55px;
     z-index: 3;
 `
 
