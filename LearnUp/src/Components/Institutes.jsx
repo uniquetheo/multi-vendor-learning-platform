@@ -16,19 +16,22 @@ export const Institutes = () => {
 
 
 const Container = styled.div`
-    position: relative;
-    left: -55px;
-    width: 100vw;
+    width: 100%;
     overflow: hidden;
     height: 220px;
     background: #1E1E1E;
     color: #EFEFEF;
     
-    // border: 3px solid red;
+    /* border: 3px solid red; */
 
-    @media(max-width: 768px){
-        height: 180px;
-        left: -24px;
+    @media only screen and (max-width: 767px){
+        height: 160px;
+        padding: 0 32px;
+    }
+
+    @media only screen and (max-width: 479px){
+        height: 200px;
+        padding: 0 24px;
     }
 `
 
@@ -40,7 +43,20 @@ const Wrap = styled.div`
     gap: 12px;
     padding: 12px;
 
+    @media only screen and (max-width: 767px){
+        height: 100%;
+        gap: 6px;
+        padding: 6px;
+        /* grid-template-columns: 1fr 1fr;  */
+    }
+    @media only screen and (max-width: 479px) {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        padding: 0;
+      }
+
     img{
-        
+        width: 100%;
+        object-fit: cover;
     }
 `

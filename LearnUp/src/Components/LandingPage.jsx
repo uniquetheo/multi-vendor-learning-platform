@@ -1,35 +1,22 @@
 import styled from "styled-components"
 import { HeroSection } from "./HeroSection"
-import { Institutes } from "./Institutes"
 import { CoursesSection } from "./CoursesSection"
-import { Features } from "./Features"
+import { Institutes } from "./Institutes"
 
 export const LandingPage = () => {
   return (
-    <>
-    <Container>
-        <HeroSection />
-        <Institutes />
-        <Features />
-        <CoursesSection />
-
-        
-    </Container>
-   
-    </>
+    <Main>
+      <HeroSection />
+      <Institutes />
+      <CoursesSection />
+    </Main>
   )
 }
 
-const Container = styled.div`
-    height: calc(100vh - 70px);
-    position: relative;
-    top: 70px;
-    padding: 0 55px;
-
-    @media(max-width: 768px){
-      padding: 0 24px;
-    }
+const Main = styled.main`
+  position: relative;
+  top: 70px;
+  width: 100%;
+  height: calc(100% - 70px);
+  background: #F8F9FF;
 `
-
-
-

@@ -1,9 +1,8 @@
 import styled from "styled-components"
 
 
-export const Navbar = () => {
-
-    
+export const NavbarOld = () => {
+  
 
   return (
     <div>
@@ -51,6 +50,15 @@ const Nav = styled.nav`
     align-items: center;
     padding: 0 55px;
     z-index: 3;
+
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+        padding: 0 55px;
+      }
+    
+      @media only screen and (max-width: 479px) {       
+        padding: 0 30px;
+      }
 `
 
 const Logo = styled.a`
@@ -66,6 +74,10 @@ const NavMenu = styled.div`
     align-items: center;
     flex-flow: row nowrap;
     position: relative;
+
+    @media only screen and (max-width: 767px){
+        display: none;
+    }
     
 
     a{
@@ -119,5 +131,4 @@ const NavMenu = styled.div`
         }
     }
   
-}
 `

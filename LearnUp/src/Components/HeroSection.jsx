@@ -1,12 +1,7 @@
 import styled from "styled-components";
+import { FancyButton, StyledButton } from "./Button/Button.styles";
 
 export const HeroSection = () => {
-  // className = "container-md"
-  // className="row"
-  // className="img-fluid"
-  //  className="col-lg-7 col-md6"
-  // className="col-lg-5 col-md-6"
-
   return (
     <Container>
       <Content>
@@ -18,15 +13,19 @@ export const HeroSection = () => {
             goals as they progress through a journey.
           </span>
           <WrapBtns>
-            <button className="btn btn-primary">Register</button>
-            <button id="tutor" className="btn btn-secondary">
-              Become a Tutor
-            </button>
+            <a href="/login">
+              <FancyButton>Register</FancyButton>
+            </a>
+            <a href="/login">
+              <StyledButton variant="outline" id="tutor">
+                Become a Tutor
+              </StyledButton>
+            </a>
           </WrapBtns>
         </CTA>
         <HeaderImage>
           {/* <WrapImg> */}
-          <img src="../pexels-yan-krukau-8613059.jpg" alt="Header Image" />
+          <img src="../phone-mockup.svg" alt="Header Image" />
           {/* </WrapImg> */}
         </HeaderImage>
       </Content>
@@ -35,12 +34,14 @@ export const HeroSection = () => {
 };
 
 const Container = styled.div`
-  height: calc(100vh - 70px);
+  /* max-height: calc(100vh - 70px); */
+  height: 690px;
   display: flex;
   justify-content: center;
   padding: 0;
   width: 100%;
-  // border: 1px solid red;
+  padding: 0 55px;
+  /* border: 1px solid red; */
 
   @media only screen and (max-width: 767px) {
     height: 915px;
@@ -80,13 +81,15 @@ const CTA = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  text-align: left;
   height: 80%;
   width: 50vw;
-  border: 1px solid red;
+  // border: 1px solid red;
   h2 {
     font-family: "Poppins";
     font-size: 36px;
     font-weight: 600;
+    margin: 0px;
   }
   span {
     font-family: "outfit", sans-serif;
@@ -98,15 +101,17 @@ const CTA = styled.div`
     width: 100%;
     align-items: center;
     text-align: center;
+    padding: 0 32px;
   }
   @media only screen and (max-width: 479px) {
     //mobile
     height: 329px;
 
     h2 {
+      font-size: 28px;
     }
     span {
-      // font-size: 18px;
+      font-size: 18px;
     }
   }
 `;
@@ -114,12 +119,23 @@ const CTA = styled.div`
 const WrapBtns = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  width: 100%;
+
+  @media only screen and (max-width: 890px) {
+    grid-template-columns: 1fr;
+  }
+
+  /* width: 100%; */
 
   @media only screen and (max-width: 767px) {
     display: flex;
+    flex-direction: column; 
     justify-content: center;
+    /* max-width: 30%; */
+    width: 40%;
 
-    width: 100%;
+    
     #tutor {
       display: none;
     }
@@ -128,21 +144,20 @@ const WrapBtns = styled.div`
     //mobile
   }
 
-  button {
+  a > button {
     font-size: 1.2rem;
-    width: 80%;
+    width: 100%;
 
     @media (max-width: 768px) {
-      width: 30%;
+      width: 100%;
     }
   }
 `;
 
 const HeaderImage = styled.div`
-  border: 3px solid green;
+  // border: 3px solid green;
   height: 32vw;
   width: 32vw;
-  background: blue;
 
   @media only screen and (max-width: 767px) {
     height: 320px;
@@ -158,7 +173,7 @@ const HeaderImage = styled.div`
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
-    box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
-      0 -6px 16px -6px #00000008;
+    /* box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
+      0 -6px 16px -6px #00000008; */
   }
 `;

@@ -43,6 +43,17 @@ const Container = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     // gap: 40px;
+
+    @media only screen and (max-width: 767px) {
+        flex-direction: row;
+        height: 915px;
+        padding: 55px 0;
+      }
+    
+      @media only screen and (max-width: 479px) {
+        height: 809px;
+        padding: 30px 0;
+      }
 `
 const Heading = styled.div``
 
