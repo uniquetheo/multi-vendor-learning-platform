@@ -2,6 +2,7 @@ import styled from "styled-components"
 import { HeroSection } from "./HeroSection"
 import { CoursesSection } from "./CoursesSection"
 import { Institutes } from "./Institutes"
+import { ContactSection } from "./ContactSection"
 
 export const LandingPage = () => {
   return (
@@ -9,13 +10,12 @@ export const LandingPage = () => {
       <HeroSection />
       <Institutes />
       <CoursesSection />
+      <ContactSection />
     </Main>
   )
 }
 
 const Main = styled.main`
-  position: relative;
-  top: 70px;
   width: 100%;
   height: calc(100% - 70px);
   background: #F8F9FF;

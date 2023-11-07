@@ -21,24 +21,24 @@ export const Navbar = () => {
   return (
     <NavbarContainer>
       <Logo href="/">
-        <img src="../../LearnUpWhiteText-NoBg.png" alt="" />
+        <img src="../../learnUpWhite.svg" alt="learnUpLogo" />
       </Logo>
       <MenuIcon onClick={showMobileNav}>
         {extendNavBar ? <FaTimes /> : <FaBars />}
       </MenuIcon>
 
       <NavMenu>
-        <NavLink to="/"><span>Home</span></NavLink>
-        <NavLink to="/courses"><span>Courses</span></NavLink>
-        <NavLink to="/about"><span>About Us</span></NavLink>
-        <NavLink to="/contact"><span>Contact Us</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/"><span>Home</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/courses"><span>Courses</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/about"><span>About Us</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/contact"><span>Contact Us</span></NavLink>
       </NavMenu>
       <a href="/login"><StyledButton>Login</StyledButton></a>
       <MobileNav id="mobile-nav">
-        <NavLink to="/"><span>Home</span></NavLink>
-        <NavLink to="/courses"><span>Courses</span></NavLink>
-        <NavLink to="/about"><span>About Us</span></NavLink>
-        <NavLink to="/contact"><span>Contact Us</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/"><span>Home</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/courses"><span>Courses</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/about"><span>About Us</span></NavLink>
+        <NavLink onClick={e => e.target.style.MobileNav.display = "none"} to="/contact"><span>Contact Us</span></NavLink>
       </MobileNav>
     </NavbarContainer>
   );

@@ -1,0 +1,93 @@
+{
+    "courses": {
+      "course_id_1": {
+        "title": "Introduction to Programming",
+        "description": "Learn the basics of programming.",
+        "instructor": "tutor_id_1",
+        "price": 49.99,
+        "enrolled_students": {
+          "student_id_1": true,
+          "student_id_2": true
+        },
+        "quizzes": {
+          "quiz_id_1": true,
+          "quiz_id_2": true
+        },
+        "reviews": {
+          "review_id_1": true,
+          "review_id_2": true
+        },
+        "certificate": {
+          "certificate_id_1": true
+        },
+        "lessons": {
+          "lesson_id_1": true,
+          "lesson_id_2": true
+        }
+      },
+      "course_id_2": {
+        // Details of another course
+      }
+    },
+    "tutors": {
+      "tutor_id_1": {
+        "name": "John Doe",
+        "courses": {
+          "course_id_1": true
+        }
+      },
+      "tutor_id_2": {
+        // Details of another tutor
+      }
+    },
+    "students": {
+      "student_id_1": {
+        "name": "Alice Smith",
+        "enrolled_courses": {
+          "course_id_1": true
+        },
+        "reviews": {
+          "review_id_3": true
+        }
+      },
+      "student_id_2": {
+        // Details of another student
+      }
+    },
+    "quizzes": {
+      "quiz_id_1": {
+        // Quiz details
+      },
+      "quiz_id_2": {
+        // Details of another quiz
+      }
+    },
+    "certificates": {
+      "certificate_id_1": {
+        // Certificate details
+      },
+      "certificate_id_2": {
+        // Details of another certificate
+      }
+    },
+    "reviews": {
+      "review_id_1": {
+        // Review details
+      },
+      "review_id_2": {
+        // Details of another review
+      },
+      "review_id_3": {
+        // Details of another review
+      }
+    },
+    "lessons": {
+      "lesson_id_1": {
+        // Lesson details
+      },
+      "lesson_id_2": {
+        // Details of another lesson
+      }
+    }
+  }
+  

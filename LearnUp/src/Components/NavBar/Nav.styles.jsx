@@ -37,7 +37,7 @@ export const Logo = styled.a`
 
   img {
     display: block;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
   }
@@ -111,10 +111,10 @@ export const MobileNav = styled.div`
   width: 100%;
   height: 0;
   background: #040404;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
 
   @media screen and (max-width: 768px) {
     height: calc(100vh - 70px);
-    /* display: flex; */
     opacity: 1;
 
   }
@@ -122,8 +122,8 @@ export const MobileNav = styled.div`
   @media screen and (max-width: 479px) {
     height: calc(100vh - 70px);
     padding: 0 24px;
-    /* display: flex; */
     opacity: 1;
+    
   }
 
   a {

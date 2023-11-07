@@ -1,0 +1,33 @@
++----------+      +-----------+      +-----------+
+| Courses  |      | Tutors    |      | Students  |
++----------+      +-----------+      +-----------+
+| course_id|<---><| tutor_id  |      | student_id|
+| title    |      | name      |<---><| name      |
+| description|    | courses   |      | enrolled_courses|
+| instructor|     +-----------+      | reviews   |
+| price    |                        +-----------+
+| enrolled_students|
+| quizzes  |
+| reviews  |
+| certificate|
+| lessons  |
++----------+
+
++----------+      +------------+
+| Quizzes  |      | Certificates|
++----------+      +------------+
+| quiz_id  |<---><| certificate_id|
+| course_id|      | course_id |
+| questions|      | student_id|
+| answers  |      +------------+
++----------+
+
++---------+       +---------+
+| Reviews |       | Lessons |
++---------+       +---------+
+| review_id|<---><| lesson_id|
+| course_id|      | course_id|
+| student_id|     | title   |
+| rating   |      | content |
+| comment  |      +---------+
++---------+

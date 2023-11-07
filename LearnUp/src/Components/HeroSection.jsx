@@ -25,7 +25,7 @@ export const HeroSection = () => {
         </CTA>
         <HeaderImage>
           {/* <WrapImg> */}
-          <img src="../phone-mockup.svg" alt="Header Image" />
+          <img src="../studentsLearning.svg" alt="Header Image" />
           {/* </WrapImg> */}
         </HeaderImage>
       </Content>
@@ -171,7 +171,7 @@ const HeaderImage = styled.div`
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     border-radius: 8px;
     /* box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
       0 -6px 16px -6px #00000008; */
