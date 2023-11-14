@@ -9,6 +9,7 @@ import { LandingPage } from "./Components/LandingPage";
 import { Footer } from "./Components/Footer";
 import { Login } from "./Components/Login";
 import { ContactPage } from "./Components/ContactPage";
+import { Signup } from "./Components/Signup";
 
 
 
@@ -23,6 +24,8 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<ContactPage />} /> 
           <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup /> } />
+          <Route path="*" element={<h1>404 Not Found</h1>} />
         </Routes>
         <Footer />
       </Router>
