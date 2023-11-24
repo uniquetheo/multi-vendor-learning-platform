@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { FancyButton, StyledButton } from "./Button/Button.styles";
+import { FancyButton, StyledButton } from "../Button/Button.styles";
 
 export const HeroSection = () => {
   return (
@@ -130,12 +130,11 @@ const WrapBtns = styled.div`
 
   @media only screen and (max-width: 767px) {
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
     justify-content: center;
     /* max-width: 30%; */
     width: 40%;
 
-    
     #tutor {
       display: none;
     }

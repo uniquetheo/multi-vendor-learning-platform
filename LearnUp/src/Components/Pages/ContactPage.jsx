@@ -19,7 +19,6 @@ export const ContactPage = () => {
             <span>BTech IT Top-up 2022</span>
             <span>Software Engineering</span>
           </Wrap>
-
         </Address>
         <Contact />
       </Content>

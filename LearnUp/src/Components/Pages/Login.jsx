@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import { css } from "styled-components";
 import { styled } from "styled-components";
-import { auth, googleProvider } from "../config/firebase";
+import { auth, googleProvider } from "../../config/firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithPopup,
@@ -9,7 +9,7 @@ import {
 } from "firebase/auth";
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { SecondaryButton, StyledButton } from "./Button/Button.styles";
+import { SecondaryButton, StyledButton } from "../Button/Button.styles";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
@@ -162,7 +162,7 @@ const Password = styled.div``;
 const Remember = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
-  
+
   label {
     height: 100%;
     align-self: center;
@@ -175,7 +175,6 @@ const Remember = styled.div`
   }
 
   label {
- 
   }
 `;
 

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Form } from "./Login";
-import { StyledButton } from "./Button/Button.styles";
+import { StyledButton } from "../Button/Button.styles";
 
 export const Signup = () => {
   return (

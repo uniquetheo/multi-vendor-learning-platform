@@ -16,7 +16,7 @@ export const Courses = () => {
 }
 
 const Container = styled.main`
-  padding: 0 55px;
+  padding: 45px 55px;
   height: 100%;
   overflow-x: hidden;
 
