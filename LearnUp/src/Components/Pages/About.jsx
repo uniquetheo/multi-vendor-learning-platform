@@ -1,5 +1,11 @@
 import styled from "styled-components";
 import { Header } from "./ContactPage";
+import {
+  AiOutlineBehance,
+  AiOutlineDribbble,
+  AiOutlineInstagram,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 
 export const About = () => {
   return (
@@ -34,23 +40,112 @@ export const About = () => {
             helping people learn new skills and concepts that will help them in
             their career.
           </p>
+          <TeamTile>
           <Wrap>
-            <Card>
-              <img src="../../joseph.jpg" alt="Joseph" />
-              <h3>Joseph</h3>
-              <p>Software Engineer</p>
-            </Card>
-            <Card>
-              <img src="../../joseph.jpg" alt="Joseph" />
-              <h3>Joseph</h3>
-              <p>Software Engineer</p>
-            </Card>
-            <Card>
-              <img src="../../joseph.jpg" alt="Joseph" />
-              <h3>Joseph</h3>
-              <p>Software Engineer</p>
-            </Card>
+            <Image>
+              <img src="../../lady.svg" alt="" />
+            </Image>
+            <Text>
+              <Name>Cilla Benyah</Name>
+              <Title>UI/UX Designer</Title>
+              <Socials>
+                <Icons>
+                  <AiOutlineInstagram className="instagram icon" />
+                  <AiOutlineDribbble className="dribbble icon" />
+                  <AiOutlineBehance className="behance icon" />
+                  <AiOutlineTwitter className="twitter icon" />
+                </Icons>
+              </Socials>
+            </Text>
           </Wrap>
+          <Wrap>
+            <Image>
+              <img src="../../lady.svg" alt="" />
+            </Image>
+            <Text>
+              <Name>Theo Mercifield</Name>
+              <Title>Frontend Developer</Title>
+              <Socials>
+                <Icons>
+                  <AiOutlineInstagram className="instagram icon" />
+                  <AiOutlineDribbble className="dribbble icon" />
+                  <AiOutlineBehance className="behance icon" />
+                  <AiOutlineTwitter className="twitter icon" />
+                </Icons>
+              </Socials>
+            </Text>
+          </Wrap>
+          <Wrap>
+            <Image>
+              <img src="../../lady.svg" alt="" />
+            </Image>
+            <Text>
+              <Name>Emma Quarm</Name>
+              <Title>Project Manager</Title>
+              <Socials>
+                <Icons>
+                  <AiOutlineInstagram className="instagram icon" />
+                  <AiOutlineDribbble className="dribbble icon" />
+                  <AiOutlineBehance className="behance icon" />
+                  <AiOutlineTwitter className="twitter icon" />
+                </Icons>
+              </Socials>
+            </Text>
+          </Wrap>
+          </TeamTile>
+          <TeamTile>
+          <Wrap>
+            <Image>
+              <img src="../../lady.svg" alt="" />
+            </Image>
+            <Text>
+              <Name>Maggie Mensah</Name>
+              <Title>Documentation</Title>
+              <Socials>
+                <Icons>
+                  <AiOutlineInstagram className="instagram icon" />
+                  <AiOutlineDribbble className="dribbble icon" />
+                  <AiOutlineBehance className="behance icon" />
+                  <AiOutlineTwitter className="twitter icon" />
+                </Icons>
+              </Socials>
+            </Text>
+          </Wrap>
+          <Wrap>
+            <Image>
+              <img src="../../lady.svg" alt="" />
+            </Image>
+            <Text>
+              <Name>Isaac Offei</Name>
+              <Title>Quality Assurance</Title>
+              <Socials>
+                <Icons>
+                  <AiOutlineInstagram className="instagram icon" />
+                  <AiOutlineDribbble className="dribbble icon" />
+                  <AiOutlineBehance className="behance icon" />
+                  <AiOutlineTwitter className="twitter icon" />
+                </Icons>
+              </Socials>
+            </Text>
+          </Wrap>
+          <Wrap>
+            <Image>
+              <img src="../../lady.svg" alt="" />
+            </Image>
+            <Text>
+              <Name>Eben Dzeagu</Name>
+              <Title>Backend Developer</Title>
+              <Socials>
+                <Icons>
+                  <AiOutlineInstagram className="instagram icon" />
+                  <AiOutlineDribbble className="dribbble icon" />
+                  <AiOutlineBehance className="behance icon" />
+                  <AiOutlineTwitter className="twitter icon" />
+                </Icons>
+              </Socials>
+            </Text>
+          </Wrap>
+          </TeamTile>
         </Team>
       </Content>
     </Main>
@@ -75,10 +170,11 @@ const Main = styled.main`
 const Content = styled.div`
   width: 100%;
   height: 100%;
-  padding: 40px;
+  /* padding: 40px; */
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 40px;
 `;
 
 const History = styled.div`
@@ -99,7 +195,7 @@ const History = styled.div`
 const Team = styled.div`
   width: 100%;
   height: 100%;
-  padding: 40px;
+  /* padding: 40px; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -111,35 +207,73 @@ const Team = styled.div`
   }
 `;
 
-const Wrap = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 40px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-`;
+const TeamTile = styled.div`
+display: flex;
+width: calc(100vw - 110px);
+flex-wrap: wrap;
+margin: 20px 0;
+justify-content: space-between;
+/* gap: 20px;   */
 
-const Card = styled.div`
-  width: 100%;
-  height: 100%;
-  padding: 40px;
+`
+
+const Wrap = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  min-height: 300px;
+  width: calc(100% / 3 - 20px);
+  border-radius: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border: 3px solid rgba(249, 249, 249, 0.1);
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 21%) 0px 16px 10px -10px;
+`;
+
+const Image = styled.div`
+/* border-radius: 50%; */
+overflow: hidden;
+
   img {
-    width: 100%;
-    max-width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    /* border-radius: 50%; */
+    inset: 0px;
+    display: block;
+    /* width: 150px; */
+    height: 150px;
     object-fit: cover;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 500ms ease-in-out 0s;
+    width: 100%;
+    z-index: 1;
+    top: 0;
   }
-  h3 {
-    font-size: 1.5rem;
-    margin: 20px 0;
-  }
-  p {
-    font-size: 1.2rem;
-    margin: 20px 0;
-  }
+`;
+
+const Text = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 150px;
+  padding: 10px;
+`;
+
+const Name = styled.h4`
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  margin: 0;
+`;
+
+const Title = styled.div`
+  font-weight: 500;
+`;
+
+const Socials = styled.div``;
+
+const Icons = styled.div`
+  display: flex;
+  justify-content: space-evenly;
 `;

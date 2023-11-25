@@ -1,6 +1,12 @@
 import styled from "styled-components";
 import { FiPhoneCall } from "react-icons/fi";
-import { AiOutlineMail, AiOutlineInstagram, AiOutlineDribbble, AiOutlineBehance, AiOutlineTwitter } from "react-icons/ai";
+import {
+  AiOutlineMail,
+  AiOutlineInstagram,
+  AiOutlineDribbble,
+  AiOutlineBehance,
+  AiOutlineTwitter,
+} from "react-icons/ai";
 export const ContactSection = () => {
   return (
     <Container>
@@ -23,13 +29,13 @@ export const ContactSection = () => {
           </Email>
         </Contacts>
         <Socials>
-            <h3>Connect with us</h3>
-            <Icons>
-                <AiOutlineInstagram className="instagram icon" />
-                <AiOutlineDribbble className="dribbble icon" />
-                <AiOutlineBehance className="behance icon" />
-                <AiOutlineTwitter className="twitter icon" />
-            </Icons>
+          <h3>Connect with us</h3>
+          <Icons>
+            <AiOutlineInstagram className="instagram icon" />
+            <AiOutlineDribbble className="dribbble icon" />
+            <AiOutlineBehance className="behance icon" />
+            <AiOutlineTwitter className="twitter icon" />
+          </Icons>
         </Socials>
       </Content>
     </Container>
@@ -53,6 +59,10 @@ const Container = styled.div`
 `;
 
 const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 20px;
   background: #fff;
   width: 100%;
   height: 100%;
