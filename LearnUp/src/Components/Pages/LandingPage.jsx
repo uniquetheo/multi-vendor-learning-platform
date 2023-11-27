@@ -3,6 +3,7 @@ import { HeroSection } from "../Sections/HeroSection";
 import { CoursesSection } from "../Sections/CoursesSection";
 import { Institutes } from "../Sections/Institutes";
 import { ContactSection } from "../Sections/ContactSection";
+import { SliderCourses } from "../Sections/SliderCourses";
 
 export const LandingPage = () => {
   return (
@@ -10,6 +11,7 @@ export const LandingPage = () => {
       <HeroSection />
       <Institutes />
       <CoursesSection />
+      <SliderCourses  />
       <ContactSection />
     </Main>
   );

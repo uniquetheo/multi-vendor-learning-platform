@@ -31,3 +31,9 @@
 | rating   |      | content |
 | comment  |      +---------+
 +---------+
+
+
+render courses with .map()
+render course tiles with .map()
+style it with slick-components
+group categories for courses

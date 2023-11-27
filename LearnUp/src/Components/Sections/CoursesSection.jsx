@@ -1,97 +1,70 @@
-import styled from "styled-components"
-import { StyledButton } from "../Button/Button.styles"
+import styled from "styled-components";
+import { StyledButton } from "../Button/Button.styles";
+import { Courses } from "../../assets/LocalDatabase/courses";
+import { Link } from "react-router-dom";
 
 export const CoursesSection = () => {
   return (
     <Container>
-        <CourseHeader>
-          <h1>Featured Courses</h1>
-          <span>Our Best Courses Offered and Taught By Best of The Instructors</span>
-        </CourseHeader>
-        <CardWrap>
+      <CourseHeader>
+        <h1>Featured Courses</h1>
+        <span>
+          Our Best Courses Offered and Taught By Best of The Instructors
+        </span>
+      </CourseHeader>
+      <CardWrap>
         <Category>
-          <Wrap>
-            <CourseImg>
-              <img src="../../pexels-yan-krukau-8613059.jpg" alt="" />
-            </CourseImg>
-            <Description>
-              <Title>Introduction to HTML</Title>
-              <Flex>
-                <Instructor>David Houston</Instructor>
-                <Price>GHS159</Price>
-              </Flex>
-              <Desc>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                sequi sed perspiciatis fugit blanditiis enim.
-              </Desc>
-              <StyledButton>View Course</StyledButton>
-            </Description>
-          </Wrap>
-          <Wrap>
-            <CourseImg>
-              <img src="../../pexels-vlada-karpovich-4050302.jpg" alt="" />
-            </CourseImg>
-            <Description>
-              <Title>Introduction to HTML</Title>
-              {/* <Flex> */}
-                <Instructor>David Houston</Instructor>
-                <Price>GHS159</Price>
-              {/* </Flex> */}
-              <Desc>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                sequi sed perspiciatis fugit blanditiis enim.
-              </Desc>
-              <StyledButton>View Course</StyledButton>
-            </Description>
-          </Wrap>
-          <Wrap>
-            <CourseImg>
-              <img src="../../pexels-nothing-ahead-3205071.jpg" alt="" />
-            </CourseImg>
-            <Description>
-              <Title>Introduction to HTML</Title>
-              <Flex>
-                <Instructor>David Houston</Instructor>
-                <Price>GHS159</Price>
-              </Flex>
-              <Desc>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae
-                sequi sed perspiciatis fugit blanditiis enim.
-              </Desc>
-              <StyledButton>View Course</StyledButton>
-            </Description>
-          </Wrap>
+          {Courses.map((course) => {
+            return (
+              <Wrap key={course.id}>
+                <CourseImg>
+                  <img src={course.thumbnailURL} alt="" />
+                </CourseImg>
+                <Description>
+                  <Title>{course.title}</Title>
+                  <Flex>
+                    <Instructor>{course.instructor}</Instructor>
+                    <Price>{course.price}</Price>
+                  </Flex>
+                  <Desc>{course.shortDesc}</Desc>
+                </Description>
+                <Link to="/learn">
+                  <StyledButton>View Course</StyledButton>
+                </Link>
+              </Wrap>
+            );
+          })}
         </Category>
-        </CardWrap>
+      </CardWrap>
     </Container>
-  )
-}
+  );
+};
 
 const Container = styled.div`
-    /* height: calc(100vh - 70px); */
-    height: 777px;
-    width: 100%;
-    padding: 0 55px;
-    overflow: hidden;
-    background: #F8F9FF;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+  /* height: calc(100vh - 70px); */
+  height: 777px;
+  width: 100%;
+  padding: 0 55px;
+  overflow: hidden;
+  background: #f8f9ff;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 
-    @media only screen and (max-width: 767px){
-      padding: 0 32px;
-      height: 1426px;
-    }
+  @media only screen and (max-width: 767px) {
+    padding: 0 32px;
+    height: 1426px;
+  }
 
-    @media only screen and (max-width: 479px){
-      padding: 0 24px;
-      height: 1611px;
-    }
-`
+  @media only screen and (max-width: 479px) {
+    padding: 0 24px;
+    height: 1611px;
+  }
+`;
 
-const CourseHeader = styled.div``
-  
+const CourseHeader = styled.div``;
+
 const CardWrap = styled.div`
   display: flex;
   justify-content: space-between;
@@ -106,39 +79,22 @@ const CardWrap = styled.div`
   @media only screen and (max-width: 479px) {
     height: 1320px;
   }
-
-`
-
-/* const Card = styled.div`
-  width: 30%;
-  height: 351px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
-      0 -6px 16px -6px #00000008;
-
-  @media only screen and (max-width: 767px) {
-    width: 87%;
-  }
-
-  @media only screen and (max-width: 479px) {
-    width: 100%;
-    height: 408px;
-  }
-` */
+`;
 
 const Category = styled.div`
-position: relative;
+  position: relative;
   display: flex;
   width: 100%;
   height: 100%;
   gap: 25px;
 `;
 
-
 const Wrap = styled.div`
   display: flex;
   flex-direction: column;
+  /* display: grid; */
+
+  
   justify-content: space-between;
   min-height: 450px;
   border-radius: 10px;
@@ -156,17 +112,25 @@ const Wrap = styled.div`
     transform: scale(1.05);
     border-color: rgba(249, 249, 249, 0.8);
   }
+
+  a {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
 `;
 
 const CourseImg = styled.div`
-
+  /* visibility: hidden; */
   img {
+    /* position: absolute; */
     inset: 0px;
     display: block;
-    height: 50%;
+    /* height: 50%; */
     object-fit: cover;
     opacity: 1;
-    position: absolute;
     transition: opacity 500ms ease-in-out 0s;
     width: 100%;
     z-index: 1;
@@ -175,19 +139,21 @@ const CourseImg = styled.div`
 `;
 
 const Description = styled.div`
-  /* position: absolute; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 50%;
+  /* height: 50%; */
   padding: 10px;
+
 `;
 
 const Title = styled.h4`
   /* width: 90%; */
-  font-family: Arial, Helvetica, sans-serif;
+  display: none;
+  /* font-family: Arial, Helvetica, sans-serif; */
   font-weight: 800;
   font-size: 1.5rem;
+  letter-spacing: .15rem;
   position: absolute;
   padding: 15px 5px;
   top: 0;
@@ -196,7 +162,6 @@ const Title = styled.h4`
   z-index: 2;
   margin: 0;
   color: #fff;
-  /* border: 1px solid red; */
   background: rgba(0, 0, 0, 0.3);
   /* text-align: center; */
 `;
@@ -218,4 +183,3 @@ const Flex = styled.div`
   display: flex;
   justify-content: space-between;
 `;
-
