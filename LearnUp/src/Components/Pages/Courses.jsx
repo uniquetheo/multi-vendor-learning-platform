@@ -1,38 +1,52 @@
 import styled from "styled-components";
 import { StyledButton } from "../Button/Button.styles";
-import { Courses } from "../../assets/LocalDatabase/courses";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { Categories } from "../../assets/LocalDatabase/categories";
 
 export const CoursesPage = () => {
+  const navigate = useNavigate();
+
+  const handleViewCourse = (courseId) => {
+    const url = `/learn/${courseId}`;
+    console.log(url);
+    navigate(url);
+  };
+
   return (
     <Container>
       <Header>
         <h1>Courses</h1>
       </Header>
       <Content>
-        <Category>
-          <CatHead>Frontend Category</CatHead>
-          {Courses.map((course) => {
-            return (
-              <Wrap key={course.id}>
-                <CourseImg>
-                  <img src={course.thumbnailURL} alt="" />
-                </CourseImg>
-                <Description>
-                  <Title>{course.title}</Title>
-                  <Flex>
-                    <Instructor>{course.instructor}</Instructor>
-                    <Price>{course.price}</Price>
-                  </Flex>
-                  <Desc>{course.shortDesc}</Desc>
-                </Description>
-                <Link to="/learn">
-                  <StyledButton>View Course</StyledButton>
-                </Link>
-              </Wrap>
-            );
-          })}
-        </Category>
+        {Categories.map((category) => {
+          return (
+            <Category key={category.id}>
+              <CatHead>{category.name} Category</CatHead>
+              {category.courses.map((course) => {
+                return (
+                  <Wrap key={course.id}>
+                    <CourseImg>
+                      <img src={course.thumbnailURL} alt="" />
+                    </CourseImg>
+                    <Description>
+                      <Title>{course.title}</Title>
+                      <Flex>
+                        <Instructor>{course.instructor}</Instructor>
+                        <Price>{course.price}</Price>
+                      </Flex>
+                      <Desc>{course.shortDesc}</Desc>
+                    </Description>
+                    {/* <Link to={}> */}
+                    <StyledButton onClick={() => handleViewCourse(course.id)}>
+                      View Course
+                    </StyledButton>
+                    {/* </Link> */}
+                  </Wrap>
+                );
+              })}
+            </Category>
+          );
+        })}
       </Content>
     </Container>
   );
@@ -114,11 +128,12 @@ export const Wrap = styled.div`
     border-color: rgba(249, 249, 249, 0.8);
   }
 
-  a {
+  /* a {
     padding: 10px;
-  }
+  } */
 
   button {
+    padding: 10px;
     width: 100%;
   }
 `;
@@ -151,7 +166,7 @@ export const Title = styled.h4`
   /* font-family: Arial, Helvetica, sans-serif; */
   font-weight: 800;
   font-size: 1.5rem;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   position: absolute;
   padding: 15px 5px;
   top: 0;

@@ -23,7 +23,7 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/learn" element={<LearnCourse />} />
+        <Route path="/learn/:id" element={<LearnCourse />} />
         <Route path="/embed" element={<TestEmbed />} />
         <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>

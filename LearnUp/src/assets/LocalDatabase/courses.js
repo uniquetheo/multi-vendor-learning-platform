@@ -1,4 +1,4 @@
-import course1 from '../../courses/course1.jpg'
+
 
 export const Courses = [
   {
@@ -10,7 +10,7 @@ export const Courses = [
     shortDesc: "In this course, you will explore the fundamental concepts that underpin the React library and learn the basic skills required to build a simple, fast, and scalable app.",
     resourcesURL: "",
       instructor: "Nerd's Lesson",
-    thumbnailURL: course1,
+    thumbnailURL: "../../coursesThumbnails/course1.jpg",
     price: "GHS46",
     videoURL: "https://www.youtube.com/embed/cd3P3yXyx30?si=J-af5S5AFhA07PkT",
   },
@@ -22,7 +22,7 @@ export const Courses = [
     shortDesc: "React is one of the most popular front-end JavaScript libraries for building user interfaces. After completing this course, you will be able to build web apps in modern React",
     resourcesURL: "",
     instructor: "Bob Ziroll",
-    thumbnailURL: "../../courses/course2.jpg",
+    thumbnailURL: "../../coursesThumbnails/bobZirollReact22.jpg",
     price: "GHS46",
     videoURL: "https://www.youtube.com/embed/bMknfKXIFA8?si=RmiloupPEbE7_Lw2",
   },
@@ -34,7 +34,7 @@ export const Courses = [
     shortDesc: "This is the most comprehensive CSS course we've published to date. So if you want to become an expert in Cascading Style Sheets, this is the course for you.",
     resourcesURL: "",
     instructor: "Dave Gray",
-    thumbnailURL: "../../courses/course3.jpg",
+    thumbnailURL: "../../coursesThumbnails/DaveGrayCss.jpg",
     price: "GHS46",
     videoURL: "https://www.youtube.com/embed/OXGznpKZ_sA?si=510h65eKYba9PAFX",
   },

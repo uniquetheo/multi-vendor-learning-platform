@@ -3,31 +3,52 @@ import { css } from "styled-components";
 import { styled } from "styled-components";
 import { auth, googleProvider } from "../../config/firebase";
 import {
-  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
 } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { SecondaryButton, StyledButton } from "../Button/Button.styles";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [loggedIn, setLoggedIn] = useState(false);
+
+  useEffect(() => {
+    logout();
+  }, []);
 
   const signIn = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password);
+      await signInWithEmailAndPassword(auth, email, password).then(
+        (userCredentials) => {
+          const user = userCredentials.user;
+          console.log(user);
+        }
+      );
     } catch (err) {
       console.error(err);
     }
   };
 
-  const signInWithGoogle = async () => {
+  // const signInWithGoogle = async () => {
+  //   try {
+  //     await signInWithPopup(auth, googleProvider);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
+
+  const signInWithGoogle = async (e) => {
+    e.preventDefault();
     try {
-      await signInWithPopup(auth, googleProvider);
-    } catch (err) {
-      console.error(err);
+      await signInWithPopup(auth, googleProvider).then(() => {
+        console.log("signed in with google");
+      });
+    } catch (error) {
+      console.error(error);
     }
   };
 
@@ -40,6 +61,16 @@ export const Login = () => {
   };
 
   console.log(auth?.currentUser?.email);
+  
+  // if (auth?.currentUser?.email) {
+  //   setLoggedIn(true);
+  //   return (
+  //     <Container>
+  //       <h1>Welcome {auth.currentUser.email}</h1>
+  //       <SecondaryButton onClick={logout}>Logout</SecondaryButton>
+  //     </Container>
+  //   );
+  // }
 
   return (
     <Container>

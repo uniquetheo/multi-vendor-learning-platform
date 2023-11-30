@@ -1,8 +1,35 @@
 import styled from "styled-components";
 import { Form } from "./Login";
 import { StyledButton } from "../Button/Button.styles";
+import { useState } from "react";
+import { auth } from "../../config/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 
 export const Signup = () => {
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(`username: ${username}`);
+    console.log(`email: ${email}`);
+    console.log(`password: ${password}`);
+    console.log(`confirmPassword: ${confirmPassword}`);
+
+    signUp();
+  };
+
+  const signUp = async () => {
+    try {
+      await createUserWithEmailAndPassword(auth, email, password)
+    } catch (error) {
+      console.error(error);
+    }
+    
+  }
+
   return (
     <Container>
       <SignupForm>
@@ -13,18 +40,38 @@ export const Signup = () => {
         <Input>
           <Username>
             <label htmlFor="username">Username</label>
-            <input type="text" placeholder="Username.." />
+            <input
+              type="text"
+              placeholder="Username.."
+              onChange={(e) => setUsername(e.target.value)}
+            />
           </Username>
           <Email>
             <label htmlFor="email">Email</label>
-            <input type="email" placeholder="Email.." />
+            <input
+              type="email"
+              placeholder="Email.."
+              onChange={(e) => setEmail(e.target.value)}
+            />
           </Email>
           <Password>
             <label htmlFor="password">Password</label>
-            <input type="password" placeholder="Password.." />
+            <input
+              type="password"
+              placeholder="Password.."
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </Password>
+          <Password>
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Confirm Password.."
+              onChange={(e) => setConfirmPassword(e.target.value)}
+            />
           </Password>
         </Input>
-        <StyledButton>Sign up</StyledButton>
+        <StyledButton onClick={handleSubmit}>Sign up</StyledButton>
         <Extra>
           <a href="/login">Already have an account?</a>
         </Extra>
