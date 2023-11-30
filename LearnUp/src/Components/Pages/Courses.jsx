@@ -96,6 +96,11 @@ const Category = styled.div`
   width: 100%;
   height: 100%;
   gap: 25px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 0;
+  }
 `;
 
 const CatHead = styled.div`

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { StyledButton } from "../Button/Button.styles";
 import { Courses } from "../../assets/LocalDatabase/courses";
 import { Link } from "react-router-dom";
+import { CoursesPage } from "../Pages/Courses";
 
 export const CoursesSection = () => {
   return (
@@ -28,7 +29,7 @@ export const CoursesSection = () => {
                   </Flex>
                   <Desc>{course.shortDesc}</Desc>
                 </Description>
-                <Link to="/learn">
+                <Link to="/courses">
                   <StyledButton>View Course</StyledButton>
                 </Link>
               </Wrap>
@@ -42,7 +43,7 @@ export const CoursesSection = () => {
 
 const Container = styled.div`
   /* height: calc(100vh - 70px); */
-  height: 777px;
+  /* height: 777px; */
   width: 100%;
   padding: 0 55px;
   overflow: hidden;
@@ -54,12 +55,12 @@ const Container = styled.div`
 
   @media only screen and (max-width: 767px) {
     padding: 0 32px;
-    height: 1426px;
+    /* height: 1426px; */
   }
 
   @media only screen and (max-width: 479px) {
     padding: 0 24px;
-    height: 1611px;
+    /* height: 1611px; */
   }
 `;
 
@@ -68,16 +69,19 @@ const CourseHeader = styled.div``;
 const CardWrap = styled.div`
   display: flex;
   justify-content: space-between;
+  height: 100%;
   /* align-items: center; */
 
   @media only screen and (max-width: 767px) {
-    height: 1093px;
+    /* height: 1093px; */
+    height: 100%;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
   }
 
   @media only screen and (max-width: 479px) {
-    height: 1320px;
+    /* height: 1320px; */
   }
 `;
 
@@ -87,6 +91,12 @@ const Category = styled.div`
   width: 100%;
   height: 100%;
   gap: 25px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 50px;
+    margin: 30px 0;
+  }
 `;
 
 const Wrap = styled.div`
