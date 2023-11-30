@@ -57,7 +57,12 @@ export const NavMenu = styled.div`
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
-  position: relative;
+  position: relative; 
+
+  a.active {
+      color: #1F5EFF;
+  }
+  
 
   @media only screen and (max-width: 767px) {
     display: none;
@@ -65,9 +70,10 @@ export const NavMenu = styled.div`
 
   a {
     display: inline-block;
-    color: white;
+    color: #fff;
     padding: 0 24px;
     font-size: 1.2rem;
+
 
     span {
       position: relative;
@@ -127,6 +133,10 @@ export const MobileNav = styled.div`
   }
 
   a {
-    color: white;
+    color: #fff;
+
+    .active {
+      color: red;
+    }
   }
 `;

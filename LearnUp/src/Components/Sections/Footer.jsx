@@ -32,13 +32,25 @@ const Container = styled.footer`
     color: white;
     padding: 0 55px;
     text-align: left;
-
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr; */
-    /* place-items: center; */
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media only screen and (max-width: 768px){
+        padding: 0 33px;
+    }
+
+    @media only screen and (max-width: 420px){
+        height: 100px;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-evenly;
+        
+        text-align: center;
+        padding: 0 24px;
+        line-height: 18px;
+        /* background-color: red; */
+    }
 
     a {
         color: white;
@@ -63,4 +75,8 @@ const Socials = styled.div`
 
 // const Address = styled.div``
 
-const Policy = styled.div``
+const Policy = styled.div`
+    @media (max-width: 768px) {
+        display: none;
+    }
+`

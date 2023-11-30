@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styled, { createGlobalStyle, css } from "styled-components";
-import { StyledButton } from "./Button/Button.styles";
+import { StyledButton } from "../Button/Button.styles";
 
 const initialState = {
   name: "",

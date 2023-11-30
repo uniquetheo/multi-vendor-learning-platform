@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Contact } from "./ContactForm";
+import { ContactSection } from "../Sections/ContactSection";
 
 export const ContactPage = () => {
   return (
@@ -8,20 +9,8 @@ export const ContactPage = () => {
         <h1>Contact Us</h1>
       </Header>
       <Content>
-        <Address>
-          <Wrap>
-            <span>Takoradi Technical University</span>
-            <span>BTech IT Top-up 2022</span>
-            <span>Software Engineering</span>
-          </Wrap>
-          <Wrap>
-            <span>Takoradi Technical University</span>
-            <span>BTech IT Top-up 2022</span>
-            <span>Software Engineering</span>
-          </Wrap>
-
-        </Address>
         <Contact />
+        <ContactSection />
       </Content>
     </Main>
   );
@@ -58,25 +47,8 @@ const Content = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 790px;
+  height: 100%;
   width: 100%;
 `;
 
-const Address = styled.div`
-  display: flex;
 
-  @media (max-width: 768px) {
-    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
-  }
-
-  @media (max-width: 480px) {
-    /* grid-template-columns: repeat(1, minmax(0, 1fr)); */
-  }
-`;
-
-const Wrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
-`;

@@ -1,0 +1,61 @@
+
+
+export const Courses = [
+  {
+    id: 1,
+    name: "Course 1",
+    title: "React JS Basic to Advance (2023)",
+    description:
+      "React is a powerful JavaScript library that you can use to build user interfaces for web and mobile applications (apps). In this course, you will explore the fundamental concepts that underpin the React library and learn the basic skills required to build a simple, fast, and scalable app.  By the end of this course, you will be able to: • Use reusable components to render views where data changes over time • Create more scalable and maintainable websites and apps  • Use props to pass data between components  • Create dynamic and interactive web pages and apps • Use forms to allow users to interact with the web page  • Build an application in React  You’ll gain experience with the following tools and software:  • React.js • JSX • React • HTML, CSS and JavaScript  • VSCode",
+    shortDesc: "In this course, you will explore the fundamental concepts that underpin the React library and learn the basic skills required to build a simple, fast, and scalable app.",
+    resourcesURL: "",
+      instructor: "Nerd's Lesson",
+    thumbnailURL: "../../coursesThumbnails/course1.jpg",
+    price: "GHS46",
+    videoURL: "https://www.youtube.com/embed/cd3P3yXyx30?si=J-af5S5AFhA07PkT",
+  },
+  {
+    id: 2,
+    name: "Course 2",
+    title: "React JavaScript Library [2022]",
+    description: "Learn React by building eight real-world projects and solving 140+ coding challenges. React is one of the most popular front-end JavaScript libraries for building user interfaces. After completing this course, you will be able to build web apps in modern React, using patterns like functional components and hooks.",
+    shortDesc: "React is one of the most popular front-end JavaScript libraries for building user interfaces. After completing this course, you will be able to build web apps in modern React",
+    resourcesURL: "",
+    instructor: "Bob Ziroll",
+    thumbnailURL: "../../coursesThumbnails/bobZirollReact22.jpg",
+    price: "GHS46",
+    videoURL: "https://www.youtube.com/embed/bMknfKXIFA8?si=RmiloupPEbE7_Lw2",
+  },
+  {
+    id: 3,
+    name: "Course 3",
+    title: "CSS Tutorial",
+    description: "In this in-depth course, you will learn about all the key features of CSS. This is the most comprehensive CSS course we've published to date. So if you want to become an expert in Cascading Style Sheets, this is the course for you.  ✏️ Course from Dave Gray. Check out his channel:      / davegrayteachescode     💻 Course Resources: https://github.com/gitdagray/css_course  🎥 Dave's HTML course:      • Learn HTML – Full Tutorial for Beginn...    ⭐️ Course Contents ⭐️ (0:00:00) Intro (0:01:08) Chapter 1: Start Here (0:14:50) Chapter 2: Selectors (0:34:41) Chapter 3: Colors (0:51:13) Chapter 4: Units & Sizes (1:11:56) Chapter 5: Box Model (1:37:08) Chapter 6: Typography (2:00:29) Chapter 7: Styling Links (2:16:37) Chapter 8: List Styles (2:32:31) Chapter 9: Mini Project (2:45:04) Chapter 10: Display (3:00:21) Chapter 11: Floats (3:12:46) Chapter 12: Columns (3:34:30) Chapter 13: Position (3:57:53) Chapter 14: Flexbox (4:21:39) Chapter 15: Grid Layout (4:46:33) Chapter 16: Images (5:32:40) Chapter 17: Media Queries (5:58:59) Chapter 18: Card Project (6:33:21) Chapter 19: Pseudo (6:52:56) Chapter 20: Variables (7:20:28) Chapter 21: Functions (7:50:05) Chapter 22: Animations (8:37:33) Chapter 23: Organization (8:57:23) Chapter 24: Final Project",
+    shortDesc: "This is the most comprehensive CSS course we've published to date. So if you want to become an expert in Cascading Style Sheets, this is the course for you.",
+    resourcesURL: "",
+    instructor: "Dave Gray",
+    thumbnailURL: "../../coursesThumbnails/DaveGrayCss.jpg",
+    price: "GHS46",
+    videoURL: "https://www.youtube.com/embed/OXGznpKZ_sA?si=510h65eKYba9PAFX",
+  },
+//   {
+//     id: 4,
+//     name: "Course 4",
+//     title: "JavaScript Tutorial for Beginners",
+//     description: "Learn JavaScript in this full course for beginners. JavaScript is one of the most popular programming languages in 2019. A lot of people are learning JavaScript to become front-end and/or back-end developers. I've designed this JavaScript tutorial for beginners to learn JavaScript from scratch. We'll start off by answering the frequently asked questions by beginners about JavaScript and shortly after we'll set up our development environment and start coding. Whether you're a beginner and want to learn to code, or you know any programming language and just want to learn JavaScript for web development, this tutorial helps you learn JavaScript fast. You don't need any prior experience with JavaScript or any other programming languages. Just watch this JavaScript tutorial to the end and you'll be writing JavaScript code in no time. If you want to become a front-end developer, you have to learn JavaScript. It is the programming language that every front-end developer must know.",
+//     shortDesc: "JavaScript is one of the most popular programming languages in 2019. A lot of people are learning JavaScript to become front-end and/or back-end developers.",
+//     resourcesURL: "",
+//     instructor: "Programming with Mosh",
+//     thumbnailURL: "../../courses/course4.jpg",
+//     price: "GHS46",
+//     videoURL: "https://www.youtube.com/embed/W6NZfCO5SIk?si=Z5BkLl6oQr6kZ6Xx",
+//   },
+//   {
+//     id: 5,
+//     name: "Course 5",
+//     title: "",
+//     description: "",
+//     instructor: "",
+//     videoURL: "",
+//   }
+];
