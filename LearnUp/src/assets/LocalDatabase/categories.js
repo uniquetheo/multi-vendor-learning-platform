@@ -1,6 +1,6 @@
 export const Categories = [
   {
-    id: 'catF',
+    id: "catF",
     name: "Frontend",
     tags: [
       "frontend",
@@ -13,7 +13,7 @@ export const Categories = [
     ],
     courses: [
       {
-        id: 'NL001',
+        id: "NL001",
         name: "Course 1",
         title: "React JS Basic to Advance (2023)",
         description:
@@ -28,7 +28,7 @@ export const Categories = [
           "https://www.youtube.com/embed/cd3P3yXyx30?si=J-af5S5AFhA07PkT",
       },
       {
-        id: 'BZ002',
+        id: "BZ002",
         name: "Course 2",
         title: "React JavaScript Library [2022]",
         description:
@@ -43,7 +43,7 @@ export const Categories = [
           "https://www.youtube.com/embed/bMknfKXIFA8?si=RmiloupPEbE7_Lw2",
       },
       {
-        id: 'DG003',
+        id: "DG003",
         name: "Course 3",
         title: "CSS Tutorial",
         description:
@@ -80,12 +80,12 @@ export const Categories = [
     ],
   },
   {
-    id: 'catB',
+    id: "catB",
     name: "Backend",
     tags: ["backend", "node", "express", "nest", "typescript", "java"],
     courses: [
       {
-        id: 'FS001',
+        id: "FS001",
         name: "Course1",
         title: "Node.js Ultimate Beginner’s Guide",
         description:
@@ -99,7 +99,7 @@ export const Categories = [
           "https://www.youtube.com/embed/ENrzD9HAZK4?si=9_2a2qzxIzOC4BIK",
       },
       {
-        id: 'TM002',
+        id: "TM002",
         name: "Course2",
         title: "Python Web Framework Tutorial",
         description:
@@ -114,7 +114,7 @@ export const Categories = [
           "https://www.youtube.com/embed/xSUm6iMtREA?si=gIPxR3eA360zR058",
       },
       {
-        id: 'AM003',
+        id: "AM003",
         name: "Course3",
         title: "Java Tutorial - User Login and Registration Backend",
         description:
@@ -143,12 +143,12 @@ export const Categories = [
     ],
   },
   {
-    id: 'catDo',
+    id: "catDo",
     name: "DevOps",
     tags: ["devops", "sdlc", "git", "release", "software", "engineering"],
     courses: [
       {
-        id: 'AC001',
+        id: "AC001",
         name: "Course 1",
         title: "What is DevOps?",
         description:
@@ -159,10 +159,11 @@ export const Categories = [
         instructor: "Andrea Crawford",
         thumbnailURL: "../../coursesThumbnails/AndreaDevOps.jpg",
         price: "GHS46",
-        videoURL: "https://youtu.be/UbtB4sMaaNM?si=Qiub1NrZW2LiVpV_",
+        videoURL:
+          "https://www.youtube.com/embed/UbtB4sMaaNM?si=v9slXmixaYHU7WxZ",
       },
       {
-        id: 'CC002',
+        id: "CC002",
         name: "Course2",
         title: "DevOps Engineering Course for Beginners",
         description:
@@ -172,11 +173,12 @@ export const Categories = [
         resourcesURL: "https://layerci.com/blog.what-is-devops",
         instructor: "Colin Chartier",
         thumbnailURL: "../../coursesThumbnails/ColinChDevOps.jpg",
-        price: "GHS46",
-        videoURL: "https://youtu.be/j5Zsa_eOXeY?si=A6B7vYI0BuMHCgJa",
+        price: "2 hours 18 minutes",
+        videoURL:
+          "https://www.youtube.com/embed/j5Zsa_eOXeY?si=L_fXPM1MBBJpDuGG",
       },
       {
-        id: 'ED003',
+        id: "ED003",
         name: "Course3",
         title: "Introduction To DevOps",
         description:
@@ -187,17 +189,18 @@ export const Categories = [
         instructor: "Edureka",
         thumbnailURL: "../../coursesThumbnails/edurekaDevOps.jpg",
         price: "GHS46",
-        videoURL: "https://www.youtube.com/embed/Me3ea4nUt0U?si=tMJcxRBT747DZFOP",
+        videoURL:
+          "https://www.youtube.com/embed/Me3ea4nUt0U?si=tMJcxRBT747DZFOP",
       },
     ],
   },
   {
-    id: 'catHD',
+    id: "catHD",
     name: "Hardware",
     tags: ["cpu", "hardware", "desktop", "laptop", "engineer"],
     courses: [
       {
-        id: 'BE001',
+        id: "BE001",
         name: "Course1",
         title: "How does Computer Hardware work?",
         description:
@@ -208,10 +211,11 @@ export const Categories = [
         instructor: "Branch Education",
         thumbnailURL: "../../coursesThumbnails/branchEduComHd.jpg",
         price: "GHS46",
-        videoURL: "https://youtu.be/d86ws7mQYIg?si=JV6pst_qlnU3ILUZ",
+        videoURL:
+          "https://www.youtube.com/embed/d86ws7mQYIg?si=m3yn3KMnBDPMJxkb",
       },
       {
-        id: 'ZS002',
+        id: "ZS002",
         name: "Course2",
         title: "Computer Engineering",
         description:
@@ -222,10 +226,11 @@ export const Categories = [
         instructor: "Zach Star",
         thumbnailURL: "../../coursesThumbnails/zachStarComEng.jpg",
         price: "GHS46",
-        videoURL: "https://youtu.be/avZTQgLs064?si=d-h_E8igephXUXPb",
+        videoURL:
+          "https://www.youtube.com/embed/avZTQgLs064?si=iNUMZTZ9VAQ3Mylc",
       },
       {
-        id: 'EC003',
+        id: "EC003",
         name: "Course3",
         title: "Explaining Desktop PC Hardware",
         description:
@@ -242,12 +247,12 @@ export const Categories = [
     ],
   },
   {
-    id: 'catNW',
+    id: "catNW",
     name: "Networking",
     tags: ["network", "ethernet", "ip", "address", "switch", "router"],
     courses: [
       {
-        id: 'ND001',
+        id: "ND001",
         name: "Course1",
         title: "Network Fundamentals Part 1",
         description:
@@ -262,7 +267,7 @@ export const Categories = [
           "https://www.youtube.com/embed/cNwEVYkx2Kk?si=tXX5QefEyjgvSml",
       },
       {
-        id: 'CB002',
+        id: "CB002",
         name: "Course2",
         title: "Computer Networking Explained",
         description:
@@ -277,7 +282,7 @@ export const Categories = [
           "https://www.youtube.com/embed/tSodBEAJz9Y?si=7zKWELg9xdZpNEhK",
       },
       {
-        id: 'NA003',
+        id: "NA003",
         name: "Course3",
         title: "Introduction to Computer Networks",
         description:
@@ -288,7 +293,8 @@ export const Categories = [
         instructor: "Neso Academy",
         thumbnailURL: "../../coursesThumbnails/nesoIntroToNet.jpg",
         price: "GHS48",
-        videoURL: "https://www.youtube.com/embed/VwN91x5i25g?si=4PIieVsymTXRv0V-",
+        videoURL:
+          "https://www.youtube.com/embed/VwN91x5i25g?si=4PIieVsymTXRv0V-",
       },
       // {
       //   id: 1,

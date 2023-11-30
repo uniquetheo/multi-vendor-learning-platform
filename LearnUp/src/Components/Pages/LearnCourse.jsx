@@ -1,6 +1,7 @@
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { Categories } from "../../assets/LocalDatabase/categories";
+import { SecondaryButton, StyledButton } from "../Button/Button.styles";
 
 export const LearnCourse = () => {
   const location = useLocation();
@@ -23,26 +24,34 @@ export const LearnCourse = () => {
 
   return (
     <Container>
-      <Header>
-        <Title>
-          <h1>{course.title}</h1>
-        </Title>
-        <Info>
-          <span>{course.instructor}</span>
-        </Info>
-      </Header>
       <Content>
-        <Description>
-          <h1> Description</h1>
-          <span>{course.description}</span>
-        </Description>
-        <Video>
-          <h1> Video</h1>
-          <iframe src={course.videoURL} frameborder="0" allowFullScreen/>
-        </Video>
-        <Resources>
-          <h1> Resources</h1>
-        </Resources>
+        <Header>
+          <Thumbnail>
+            <img src={course.thumbnailURL} alt="courseThumbnail" />
+          </Thumbnail>
+          <HeaderDesc>
+            <Title>{course.title}</Title>
+            <Instructor>{course.instructor}</Instructor>
+            <Duration>6 hours, 41 minutes</Duration>
+          </HeaderDesc>
+        </Header>
+        <Preview>
+          <Video>
+            <iframe
+              src={course.videoURL}
+              frameborder="0"
+              allowFullScreen
+            ></iframe>
+          </Video>
+          <Description>
+            <DescText>{course.description}</DescText>
+            <SecondaryButton>Watch Now</SecondaryButton>
+          </Description>
+        </Preview>
+        <ResourceSection>
+          <ResourceHeader>Resources and Downloads</ResourceHeader>
+          <Resource></Resource>
+        </ResourceSection>
       </Content>
     </Container>
   );
@@ -50,143 +59,129 @@ export const LearnCourse = () => {
 
 const Container = styled.main`
   width: 100%;
-  /* height: calc(100% - 70px); */
   background: #f8f9ff;
-`;
-
-const Header = styled.div`
-  width: 100%;
-  height: 400px;
-  background-color: #1e1e1e;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  @media only screen and (max-width: 768px) {
-    height: 300px;
-  }
-
-  @media only screen and (max-width: 420px) {
-    height: 200px;
-  }
-`;
-
-const Title = styled.div`
-  h1 {
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 30px;
-    }
-
-    @media only screen and (max-width: 420px) {
-      font-size: 20px;
-    }
-  }
-`;
-
-const Info = styled.div`
-  span {
-    color: white;
-    font-size: 20px;
-    font-weight: 400;
-    letter-spacing: 1px;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 15px;
-    }
-
-    @media only screen and (max-width: 420px) {
-      font-size: 10px;
-    }
-  }
+  /* padding: 0 55px; */
 `;
 
 const Content = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #f8f9ff;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 100%;
+  height: 100%;
 `;
 
-const Description = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #1e1e1e;
+const Header = styled.div`
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 200px;
+  padding: 0 55px;
+  background: #f2f2f2;
+`;
 
-  h1 {
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 1px;
+const Thumbnail = styled.div`
+  /* width: 160px; */
+  height: 160px;
 
-    @media only screen and (max-width: 768px) {
-      font-size: 30px;
-    }
+  img {
+    height: 100%;
+    /* min-width: 200px; */
+    display: block;
+    inset: 0px;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 500ms ease-in-out 0s;
+    border: 1px solid transparent;
+    /* box-shadow: 1px 1px rgba(0, 0, 0, 0.4); */
+  }
+`;
 
-    @media only screen and (max-width: 420px) {
-      font-size: 20px;
-    }
+const HeaderDesc = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* gap: 15px; */
+  height: 120px;
+  padding: 0 10px;
+  text-align: left;
+`;
+
+const Title = styled.div`
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 32px;
+`;
+
+const Instructor = styled.div`
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 32px;
+`;
+
+const Duration = styled.div``;
+
+const Preview = styled.div`
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  min-height: 520px;
+  padding: 0 55px;
+  text-align: left;
+
+  @media (max-width: 1200px) {
+    grid-template-columns: 1fr;
+    margin-bottom:  20px; 
   }
 `;
 
 const Video = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #f8f9ff;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  position: relative;
   justify-content: center;
+  align-items: center;
+  min-width: 100%;
+    min-height: 100%;
+  padding: 10px 10px 10px 0;
+  height: 350px;
 
-  h1 {
-    color: black;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 30px;
-    }
-
-    @media only screen and (max-width: 420px) {
-      font-size: 20px;
-    }
+  iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
   }
 `;
 
-const Resources = styled.div`
-  width: 100%;
-  height: 100%;
-  background-color: #1e1e1e;
+const Description = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 20px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+`;
+
+const DescText = styled.div`
+  /* font-size: 0.85rem; */
+`;
+
+const ResourceSection = styled.div``;
+
+const ResourceHeader = styled.div`
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  width: 100%;
+  height: 100px;
+  padding: 0 55px;
+  background: #f2f2f2;
+`;
 
-  h1 {
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 1px;
-
-    @media only screen and (max-width: 768px) {
-      font-size: 30px;
-    }
-
-    @media only screen and (max-width: 420px) {
-      font-size: 20px;
-    }
-  }
+const Resource = styled.div`
+  height: 250px;
 `;
