@@ -23,7 +23,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Nerd's Lesson",
         thumbnailURL: "../../coursesThumbnails/course1.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/cd3P3yXyx30?si=J-af5S5AFhA07PkT",
       },
@@ -38,7 +38,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Bob Ziroll",
         thumbnailURL: "../../coursesThumbnails/bobZirollReact22.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/bMknfKXIFA8?si=RmiloupPEbE7_Lw2",
       },
@@ -53,7 +53,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Dave Gray",
         thumbnailURL: "../../coursesThumbnails/DaveGrayCss.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/OXGznpKZ_sA?si=510h65eKYba9PAFX",
       },
@@ -66,7 +66,7 @@ export const Categories = [
       //   resourcesURL: "",
       //   instructor: "Programming with Mosh",
       //   thumbnailURL: "../../courses/course4.jpg",
-      //   price: "GHS46",
+      //   duration: "1h 30mins",
       //   videoURL: "https://www.youtube.com/embed/W6NZfCO5SIk?si=Z5BkLl6oQr6kZ6Xx",
       // },
       // {
@@ -94,7 +94,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Fire Ship",
         thumbnailURL: "../../coursesThumbnails/FireShipNode.jpg",
-        price: "GHS47",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/ENrzD9HAZK4?si=9_2a2qzxIzOC4BIK",
       },
@@ -109,7 +109,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Tomi",
         thumbnailURL: "../../coursesThumbnails/TomiPython.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/xSUm6iMtREA?si=gIPxR3eA360zR058",
       },
@@ -124,7 +124,7 @@ export const Categories = [
         resourcesURL: "https://amigoscode.com/p/java-essentials",
         instructor: "Amigos Code",
         thumbnailURL: "../../coursesThumbnails/AmigosJava.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/QwQuro7ekvc?si=miuP89PFSzv4HkMr",
       },
@@ -137,8 +137,7 @@ export const Categories = [
       //   resourcesURL: "",
       //   instructor: "",
       //   thumbnailURL: "",
-      //   price: "",
-      //   videoURL: "",
+      //   duration: "1h 30mins    //   videoURL: "",
       // },
     ],
   },
@@ -158,7 +157,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Andrea Crawford",
         thumbnailURL: "../../coursesThumbnails/AndreaDevOps.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/UbtB4sMaaNM?si=v9slXmixaYHU7WxZ",
       },
@@ -173,7 +172,7 @@ export const Categories = [
         resourcesURL: "https://layerci.com/blog.what-is-devops",
         instructor: "Colin Chartier",
         thumbnailURL: "../../coursesThumbnails/ColinChDevOps.jpg",
-        price: "2 hours 18 minutes",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/j5Zsa_eOXeY?si=L_fXPM1MBBJpDuGG",
       },
@@ -188,7 +187,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Edureka",
         thumbnailURL: "../../coursesThumbnails/edurekaDevOps.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/Me3ea4nUt0U?si=tMJcxRBT747DZFOP",
       },
@@ -210,7 +209,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Branch Education",
         thumbnailURL: "../../coursesThumbnails/branchEduComHd.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/d86ws7mQYIg?si=m3yn3KMnBDPMJxkb",
       },
@@ -225,7 +224,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Zach Star",
         thumbnailURL: "../../coursesThumbnails/zachStarComEng.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/avZTQgLs064?si=iNUMZTZ9VAQ3Mylc",
       },
@@ -240,7 +239,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Explaining Computers",
         thumbnailURL: "../../coursesThumbnails/xplainCompHw.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/nTtdEYRh8WI?si=yYN17y7jF1wkxX_2",
       },
@@ -262,7 +261,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Network Direction",
         thumbnailURL: "../../coursesThumbnails/netDirNetFund.jpg",
-        price: "GHS46",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/cNwEVYkx2Kk?si=tXX5QefEyjgvSml",
       },
@@ -277,7 +276,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "CertBros",
         thumbnailURL: "../../coursesThumbnails/certBrosComNet.jpg",
-        price: "GHS43",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/tSodBEAJz9Y?si=7zKWELg9xdZpNEhK",
       },
@@ -292,7 +291,7 @@ export const Categories = [
         resourcesURL: "",
         instructor: "Neso Academy",
         thumbnailURL: "../../coursesThumbnails/nesoIntroToNet.jpg",
-        price: "GHS48",
+        duration: "1h 30mins",
         videoURL:
           "https://www.youtube.com/embed/VwN91x5i25g?si=4PIieVsymTXRv0V-",
       },
@@ -305,8 +304,7 @@ export const Categories = [
       //   resourcesURL: "",
       //   instructor: "",
       //   thumbnailURL: "",
-      //   price: "",
-      //   videoURL: "",
+      //   duration: "1h 30mins"    //   videoURL: "",
       // },
     ],
   },

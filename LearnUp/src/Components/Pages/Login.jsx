@@ -2,23 +2,19 @@
 import { css } from "styled-components";
 import { styled } from "styled-components";
 import { auth, googleProvider } from "../../config/firebase";
-import {
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  signOut,
-} from "firebase/auth";
-import { useEffect, useState } from "react";
+import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
+import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
-import { SecondaryButton, StyledButton } from "../Button/Button.styles";
+import { StyledButton } from "../Button/Button.styles";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [loggedIn, setLoggedIn] = useState(false);
+  // const [loggedIn, setLoggedIn] = useState(false);
 
-  useEffect(() => {
-    logout();
-  }, []);
+  // useEffect(() => {
+  //   logout();
+  // }, []);
 
   const signIn = async () => {
     try {
@@ -52,16 +48,16 @@ export const Login = () => {
     }
   };
 
-  const logout = async () => {
-    try {
-      await signOut(auth);
-    } catch (err) {
-      console.error(err);
-    }
-  };
+  // const logout = async () => {
+  //   try {
+  //     await signOut(auth);
+  //   } catch (err) {
+  //     console.error(err);
+  //   }
+  // };
 
   console.log(auth?.currentUser?.email);
-  
+
   // if (auth?.currentUser?.email) {
   //   setLoggedIn(true);
   //   return (
@@ -121,7 +117,7 @@ export const Login = () => {
 
 const Container = styled.main`
   overflow: hidden;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 150px);
   width: 100%;
   position: relative;
   top: 70px;
@@ -130,8 +126,16 @@ const Container = styled.main`
   justify-content: center;
   align-items: center;
   text-align: left;
-  padding: 0 55px;
+  padding: 60px 55px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    padding: 55px 32px;
+  }
+
+  @media only screen and (max-width: 486px) {
+    padding: 35px 24px;
+  }
 `;
 
 export const SharedStyles = css`
@@ -142,6 +146,11 @@ export const SharedStyles = css`
   margin: 0 0 20px 0;
   padding: 20px;
   box-sizing: border-box;
+
+  @media only screen and (max-width: 560px) {
+    height: 32px;
+    padding: 10px;
+  }
 `;
 
 export const Form = styled.form`
@@ -152,6 +161,18 @@ export const Form = styled.form`
   border-radius: 10px;
   box-sizing: border-box;
   box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.2);
+
+  @media only screen and (max-width: 560px) {
+    padding: 32px;
+
+    button {
+      font-size: 12px;
+    }
+  }
+
+  @media only screen and (max-width: 486px) {
+    padding: 24px;
+  } 
 
   label {
     font-weight: bold;
@@ -176,11 +197,20 @@ export const Form = styled.form`
 const FormHeading = styled.div`
   h2 {
     margin-bottom: 20px;
+
+    @media only screen and (max-width: 560px) {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
   }
 
   span {
     font-size: 14px;
     color: #666;
+
+    @media only screen and (max-width: 560px) {
+      font-size: 12px;
+    }
   }
 `;
 
@@ -193,6 +223,10 @@ const Password = styled.div``;
 const Remember = styled.div`
   display: grid;
   grid-template-columns: 30px 1fr;
+
+  @media only screen and (max-width: 560px) {
+    font-size: 12px;
+  }
 
   label {
     height: 100%;
@@ -215,12 +249,20 @@ export const Extra = styled.div`
   gap: 20px;
   margin-top: 20px;
 
+  @media only screen and (max-width: 560px) {
+    gap: 5px;
+  }
+
   a {
     text-decoration: none;
     color: #000;
     font-size: 14px;
     &:hover {
       text-decoration: underline;
+    }
+
+    @media only screen and (max-width: 560px) {
+      font-size: 12px;
     }
   }
 `;

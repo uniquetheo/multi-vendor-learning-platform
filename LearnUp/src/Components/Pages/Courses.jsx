@@ -32,7 +32,7 @@ export const CoursesPage = () => {
                       <Title>{course.title}</Title>
                       <Flex>
                         <Instructor>{course.instructor}</Instructor>
-                        <Price>{course.price}</Price>
+                        <Duration>{course.duration}</Duration>
                       </Flex>
                       <Desc>{course.shortDesc}</Desc>
                     </Description>
@@ -187,7 +187,7 @@ export const Instructor = styled.div`
   font-weight: 500;
 `;
 
-export const Price = styled.div`
+export const Duration = styled.div`
   color: blue;
 `;
 

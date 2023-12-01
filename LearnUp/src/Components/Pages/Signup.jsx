@@ -80,9 +80,10 @@ export const Signup = () => {
   );
 };
 
-const Container = styled.div`
+// const Container = styled.div`
+const Container = styled.main`
   overflow: hidden;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 150px);
   width: 100%;
   position: relative;
   top: 70px;
@@ -91,8 +92,16 @@ const Container = styled.div`
   justify-content: center;
   align-items: center;
   text-align: left;
-  padding: 0 55px;
+  padding: 60px 55px;
   margin: 0 auto;
+
+  @media only screen and (max-width: 768px) {
+    padding: 55px 32px;
+  }
+
+  @media only screen and (max-width: 486px) {
+    padding: 35px 24px;
+  }
 `;
 
 const SignupForm = styled(Form)``;
@@ -105,6 +114,17 @@ const FormHeading = styled.div`
   span {
     font-size: 14px;
     color: #666;
+  }
+
+  @media only screen and (max-width: 560px) {
+    h2 {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+
+    span {
+      font-size: 0.85rem;
+    }
   }
 `;
 
@@ -128,6 +148,12 @@ const Extra = styled.div`
     font-size: 14px;
     &:hover {
       text-decoration: underline;
+    }
+  }
+
+  @media only screen and (max-width: 560px) {
+    a {
+      font-size: 12px;
     }
   }
 `;

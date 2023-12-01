@@ -48,12 +48,12 @@ const Container = styled.div`
   padding: 55px;
 
   @media only screen and (max-width: 767px) {
-    height: 764px;
+    height: 664px;
     padding: 32px 50px;
   }
 
   @media only screen and (max-width: 479px) {
-    height: 821px;
+    height: 621px;
     padding: 30px;
   }
 `;

@@ -11,6 +11,8 @@ export const NavbarContainer = styled.nav`
   color: white;
   display: flex;
   justify-content: space-between;
+  max-width: 1440px;
+    margin: 0 auto;
 
   align-items: center;
   padding: 0 55px;
@@ -28,11 +30,13 @@ export const NavbarContainer = styled.nav`
 `;
 
 export const Logo = styled.a`
-  height: 35px;
+  min-width: 100px;
   cursor: pointer;
+  height: 65px;
+  /* border: 1px solid white; */
 
-  @media only screen and (max-width: 767px) {
-    display: none;
+  @media only screen and (max-width: 480px) {
+    height: 50px;
   }
 
   img {
@@ -61,6 +65,15 @@ export const NavMenu = styled.div`
 
   a.active {
       color: #1F5EFF;
+  }
+
+  @media screen and (max-width: 1080px) {
+    a {
+      padding: 0 16px !important;
+      font-size: 1rem !important;
+      /* color: red; */
+      /* border: 1px solid white; */
+    }
   }
   
 

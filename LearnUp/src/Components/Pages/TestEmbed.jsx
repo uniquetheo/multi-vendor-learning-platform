@@ -2,7 +2,7 @@
 import styled from "styled-components";
 import Slider from "react-slick";
 import { Courses } from "../../assets/LocalDatabase/courses";
-import { Wrap, CourseImg, Desc, Description, Flex, Instructor, Price, Title } from "./Courses";
+import { Wrap, CourseImg, Desc, Description, Flex, Instructor, Duration, Title } from "./Courses";
 import { Link } from "react-router-dom";
 import { StyledButton } from "../Button/Button.styles";
 
@@ -52,7 +52,7 @@ export const TestEmbed = () => {
                     <Instructor>
                         {course.instructor}
                     </Instructor>
-                    <Price>{course.price}</Price>
+                    <Duration>{course.duration}</Duration>
                   </Flex>
                   <Desc>{course.shortDesc}</Desc>
                   <Link to="/learn"><StyledButton>View Course</StyledButton></Link>

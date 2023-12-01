@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { StyledButton } from "../Button/Button.styles";
 import { Courses } from "../../assets/LocalDatabase/courses";
 import { Link } from "react-router-dom";
-import { CoursesPage } from "../Pages/Courses";
 
 export const CoursesSection = () => {
   return (
@@ -64,7 +63,9 @@ const Container = styled.div`
   }
 `;
 
-const CourseHeader = styled.div``;
+const CourseHeader = styled.div`
+  height: 150px;
+`
 
 const CardWrap = styled.div`
   display: flex;
@@ -104,7 +105,6 @@ const Wrap = styled.div`
   flex-direction: column;
   /* display: grid; */
 
-  
   justify-content: space-between;
   min-height: 450px;
   border-radius: 10px;
@@ -154,7 +154,6 @@ const Description = styled.div`
   justify-content: space-between;
   /* height: 50%; */
   padding: 10px;
-
 `;
 
 const Title = styled.h4`
@@ -163,7 +162,7 @@ const Title = styled.h4`
   /* font-family: Arial, Helvetica, sans-serif; */
   font-weight: 800;
   font-size: 1.5rem;
-  letter-spacing: .15rem;
+  letter-spacing: 0.15rem;
   position: absolute;
   padding: 15px 5px;
   top: 0;

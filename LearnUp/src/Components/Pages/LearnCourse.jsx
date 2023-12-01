@@ -1,7 +1,8 @@
+/* eslint-disable react/no-unknown-property */
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 import { Categories } from "../../assets/LocalDatabase/categories";
-import { SecondaryButton, StyledButton } from "../Button/Button.styles";
+import { SecondaryButton } from "../Button/Button.styles";
 
 export const LearnCourse = () => {
   const location = useLocation();
@@ -40,7 +41,6 @@ export const LearnCourse = () => {
             <iframe
               src={course.videoURL}
               frameborder="0"
-              allowFullScreen
             ></iframe>
           </Video>
           <Description>
@@ -77,8 +77,23 @@ const Header = styled.div`
   justify-content: center;
   width: 100%;
   height: 200px;
-  padding: 0 55px;
+  padding: 20px 55px;
   background: #f2f2f2;
+
+  @media (max-width: 1200px) {
+    flex-direction: column;
+    height: auto;
+    /* padding: 20px 55px 20px; */
+    text-align: center;
+    gap: 20px;
+
+  }
+
+  @media (max-width: 768px) {
+    /* flex-direction: column-reverse; */
+    padding: 20px 32px 20px;
+    font-size: 0.85rem;
+  }
 `;
 
 const Thumbnail = styled.div`
@@ -94,7 +109,9 @@ const Thumbnail = styled.div`
     opacity: 1;
     transition: opacity 500ms ease-in-out 0s;
     border: 1px solid transparent;
-    /* box-shadow: 1px 1px rgba(0, 0, 0, 0.4); */
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 19%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 1%) 0px 16px 10px -10px;
   }
 `;
 
@@ -106,18 +123,35 @@ const HeaderDesc = styled.div`
   height: 120px;
   padding: 0 10px;
   text-align: left;
+
+  @media (max-width: 1200px) {
+    text-align: center;
+    height: auto;
+  }
 `;
 
 const Title = styled.div`
   font-weight: 600;
   font-size: 1.8rem;
   line-height: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 1.2rem;
+    line-height: 24px;
+    text-align: center;
+  }
 `;
 
 const Instructor = styled.div`
   font-weight: 600;
   font-size: 1.2rem;
   line-height: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 0.85rem;
+    line-height: 24px;
+    text-align: center;
+  }
 `;
 
 const Duration = styled.div``;

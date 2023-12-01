@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import styled from "styled-components";
 import { FancyButton, StyledButton } from "../Button/Button.styles";
 
@@ -44,7 +45,7 @@ const Container = styled.div`
   /* border: 1px solid red; */
 
   @media only screen and (max-width: 767px) {
-    height: 915px;
+    height: 715px;
     padding: 55px 0;
   }
 
@@ -65,7 +66,7 @@ const Content = styled.div`
   // border: 5px solid green;
 
   @media only screen and (max-width: 767px) {
-    height: 800px;
+    height: 600px;
     flex-direction: column;
     gap: 40px;
   }
@@ -102,6 +103,18 @@ const CTA = styled.div`
     align-items: center;
     text-align: center;
     padding: 0 32px;
+
+    h2{
+      font-size: 24px;
+      line-height: 1.2;
+      text-align: left
+    }
+
+    span {
+      font-size: 18px;
+      line-height: 1.2;
+      text-align: left;
+    }
   }
   @media only screen and (max-width: 479px) {
     //mobile
@@ -157,6 +170,9 @@ const HeaderImage = styled.div`
   // border: 3px solid green;
   height: 32vw;
   width: 32vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @media only screen and (max-width: 767px) {
     height: 320px;
@@ -164,14 +180,15 @@ const HeaderImage = styled.div`
   }
   @media only screen and (max-width: 479px) {
     //mobile
-    width: 320px;
+    /* width: 320px; */
+    width: 100%;
+    /* border: 1px solid red; */
   }
 
   img {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: 8px;
     /* box-shadow: 0 13px 27px -5px #32325d40, 0 8px 16px -8px #0000004d,
       0 -6px 16px -6px #00000008; */
   }

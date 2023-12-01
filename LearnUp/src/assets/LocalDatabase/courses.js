@@ -11,7 +11,7 @@ export const Courses = [
     resourcesURL: "",
       instructor: "Nerd's Lesson",
     thumbnailURL: "../../coursesThumbnails/course1.jpg",
-    price: "GHS46",
+    duration: "1hr 46mins",
     videoURL: "https://www.youtube.com/embed/cd3P3yXyx30?si=J-af5S5AFhA07PkT",
   },
   {
@@ -23,7 +23,7 @@ export const Courses = [
     resourcesURL: "",
     instructor: "Bob Ziroll",
     thumbnailURL: "../../coursesThumbnails/bobZirollReact22.jpg",
-    price: "GHS46",
+    duration: "1hr 46mins ",
     videoURL: "https://www.youtube.com/embed/bMknfKXIFA8?si=RmiloupPEbE7_Lw2",
   },
   {
@@ -35,7 +35,7 @@ export const Courses = [
     resourcesURL: "",
     instructor: "Dave Gray",
     thumbnailURL: "../../coursesThumbnails/DaveGrayCss.jpg",
-    price: "GHS46",
+    duration: "1hr 46mins ",
     videoURL: "https://www.youtube.com/embed/OXGznpKZ_sA?si=510h65eKYba9PAFX",
   },
 //   {
@@ -47,7 +47,7 @@ export const Courses = [
 //     resourcesURL: "",
 //     instructor: "Programming with Mosh",
 //     thumbnailURL: "../../courses/course4.jpg",
-//     price: "GHS46",
+//     duration: "1hr 46mins ",
 //     videoURL: "https://www.youtube.com/embed/W6NZfCO5SIk?si=Z5BkLl6oQr6kZ6Xx",
 //   },
 //   {

@@ -3,6 +3,7 @@ import styled from "styled-components"
 export const Footer = () => {
   return (
     <Container>
+        
         <Copyright>
             <span>© 2023 LearnUp. All Rights Reserved.</span>
             {/* <span>Terms of Service | Privacy Policy</span> */}
@@ -35,6 +36,8 @@ const Container = styled.footer`
     display: flex;
     align-items: center;
     justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
 
     @media only screen and (max-width: 768px){
         padding: 0 33px;
