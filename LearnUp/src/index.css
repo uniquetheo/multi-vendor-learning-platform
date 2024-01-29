@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 html {
   scroll-behavior: smooth;
 }
@@ -25,33 +29,16 @@ a {
   text-decoration: none;
 }
 
-@media only screen and (min-width: 768px) {
-  body {
-    /* font-size: 16px; */
-    text-align: left;
-  }
-}
-
-/* Tablet */
-@media only screen and (min-width: 480px) and (max-width: 767px) {
-  body {
-    /* font-size: 15px; */
-    text-align: center;
-  }
-
-  /* main {
-    padding: 0 32px;
-  } */
-}
-
-/* Phone */
-@media only screen and (min-width: 479px) {
-  body {
-    /* font-size: 14px; */
-    text-align: center;
-  }
-
-  /* main {
-    padding: 0 24px;
-  } */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  border-radius: 8px;
 }

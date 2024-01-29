@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Form } from "./Login";
 import { StyledButton } from "../Button/Button.styles";
 import { useState } from "react";
+import { Navigate } from "react-router-dom";
 import { auth } from "../../config/firebase";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -10,6 +11,8 @@ export const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const navigate = Navigate();
+  
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,11 +22,12 @@ export const Signup = () => {
     console.log(`confirmPassword: ${confirmPassword}`);
 
     signUp();
+    
   };
 
   const signUp = async () => {
     try {
-      await createUserWithEmailAndPassword(auth, email, password)
+      await createUserWithEmailAndPassword(auth, email, password).then(()=>{navigate("/")})
     } catch (error) {
       console.error(error);
     }

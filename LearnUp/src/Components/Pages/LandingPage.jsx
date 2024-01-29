@@ -11,7 +11,6 @@ export const LandingPage = () => {
       <HeroSection />
       <Institutes />
       <CoursesSection />
-      {/* <SliderCourses  /> */}
       <ContactSection />
     </Main>
   );

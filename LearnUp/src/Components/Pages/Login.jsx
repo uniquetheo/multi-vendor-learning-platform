@@ -3,70 +3,63 @@ import { css } from "styled-components";
 import { styled } from "styled-components";
 import { auth, googleProvider } from "../../config/firebase";
 import { signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import { StyledButton } from "../Button/Button.styles";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const [loggedIn, setLoggedIn] = useState(false);
+  const [message, setMessage] = useState("");
+  const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   logout();
-  // }, []);
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        navigate("/courses")
+        setMessage("user signed in");
+      } else {
+        console.log("no user");
+      }
+    });
+    return unsubscribe();
+  }, []);
 
   const signIn = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password).then(
         (userCredentials) => {
           const user = userCredentials.user;
-          console.log(user);
+          setMessage("Signed in successfully");
+          console.log(message);
+          navigate("/courses");
         }
       );
     } catch (err) {
       console.error(err);
+      setMessage("Failed to sign in");
+      console.log(err.message);
     }
   };
-
-  // const signInWithGoogle = async () => {
-  //   try {
-  //     await signInWithPopup(auth, googleProvider);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
 
   const signInWithGoogle = async (e) => {
     e.preventDefault();
     try {
       await signInWithPopup(auth, googleProvider).then(() => {
-        console.log("signed in with google");
+        setMessage("signed in with google");
+        console.log(message);
+        navigate("/courses");
       });
     } catch (error) {
       console.error(error);
+      setMessage(error.message);
+      console.log(message);
     }
+
   };
 
-  // const logout = async () => {
-  //   try {
-  //     await signOut(auth);
-  //   } catch (err) {
-  //     console.error(err);
-  //   }
-  // };
-
   console.log(auth?.currentUser?.email);
-
-  // if (auth?.currentUser?.email) {
-  //   setLoggedIn(true);
-  //   return (
-  //     <Container>
-  //       <h1>Welcome {auth.currentUser.email}</h1>
-  //       <SecondaryButton onClick={logout}>Logout</SecondaryButton>
-  //     </Container>
-  //   );
-  // }
 
   return (
     <Container>
@@ -172,7 +165,7 @@ export const Form = styled.form`
 
   @media only screen and (max-width: 486px) {
     padding: 24px;
-  } 
+  }
 
   label {
     font-weight: bold;
